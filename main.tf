@@ -372,7 +372,7 @@ resource "aws_subnet" "private" {
   tags = merge(
     {
       "Name" = format(
-        "%s-${var.private_subnet_suffix}-%s",
+        "%s-${var.private_subnet_suffix}-%s-%s",
         var.name,
         element(var.azs, count.index),
         element(var.private_subnets, count.index),
